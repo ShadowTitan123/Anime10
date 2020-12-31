@@ -1,0 +1,19 @@
+{
+  "name": "hapijsapp",
+  "version": "1.0.0",
+  "description": "TodoList Using HapiJS",
+  "main": "index.js",
+  "scripts": {
+    "hapi": "nodemon index.js"
+  },
+  "author": "Mohammed Adil",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^20.0.3",
+    "@hapi/inert": "^6.0.3",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5",
+    "hapi-axios": "^1.0.0",
+    "mongoose": "^5.11.8"
+  }
+}
