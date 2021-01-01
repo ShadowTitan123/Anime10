@@ -3,17 +3,22 @@
     "short_name": "Anime10",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#2A3443",
+    "background_color": "#fffff",
     "description": "Get all The Top 10's Of Anime",
-    "theme_color": "#2A3443",
+    "theme_color": "#fffff",
     "prefer_related_applications": false,
     "icons": [
       {
-        "src": "assets/images/logo-inverse.png",
-        "sizes": "512x512",
-        "type": "image/png"
+          "src": "assets/images/favicon/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      },
+      {
+          "src": "assets/images/favicon/android-chrome-256x256.png",
+          "sizes": "256x256",
+          "type": "image/png"
       }
-    ]
+  ]
     
   }
 
