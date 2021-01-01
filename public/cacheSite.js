@@ -7,6 +7,7 @@ const cacheName = 'v1';
 
 self.addEventListener('install',e =>{ // attaching listener to current worker
     console.log('Service Worker installed');
+    self.skipWaiting();
 });
 
 //Activate SW 
