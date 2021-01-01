@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const Hapi = require('@hapi/hapi');
 const Path = require('path');
 const cheerio = require('cheerio');
@@ -18,7 +19,7 @@ const HapiAxios = require('hapi-axios');
 const init = async () => {
 
   const server = Hapi.server({
-    port: 5000,
+    port: process.env.PORT,
     host: 'localhost',
     routes: {
       files: {
@@ -144,7 +145,7 @@ const init = async () => {
        
         headlines.push(OutputNews);
       })
-      console.log(headlines);
+    //  console.log(headlines);
       headlines.length = 10;  // Setting the Limit of The Array to 10 
       JSON.stringify(headlines);
       return headlines;
