@@ -113,27 +113,38 @@ const init = async () => {
 
       var OutputNews;
       let headlines = [];
+      let index = 0;
       // Looping The Scrapped Latest News 
       $('.w-content article').each((i, el) => {
+     
+         
         tit = $(el).find('h3').text().replace(/^\s+|\s+$|\s+(?=\s)/g, "");
         time = $(el).find('.bc-excerpt').text();
         redirect_link = $(el).find('a').attr('href');
         img_path = $(el).find('picture source').attr('data-srcset');
         Author = $(el).find('.bc-details a').text();
         Time = $(el).find('.bc-details time').text();
+        BaseUrl = 'https://www.cbr.com';
+        Source = 'www.cbr.com';
+        SourceName = 'CBR NEWS';
         // console.log(img_path);
+       index++;
         OutputNews =
         {
-          'title': `slNo ${i}:  ` + tit,
+          'SlNo' : index,
+          'title': tit,
           'Description': time,
-          'redirect_link': redirect_link,
+          'redirect_link': BaseUrl+redirect_link,
           'Image_Path': img_path,
           'Author': Author,
-          'Time': Time
+          'Time': Time,
+          'Source': Source,
+          'SourceName' : SourceName
         }
+       
         headlines.push(OutputNews);
       })
-
+      console.log(headlines);
       headlines.length = 10;  // Setting the Limit of The Array to 10 
       JSON.stringify(headlines);
       return headlines;
@@ -150,7 +161,7 @@ const init = async () => {
   server.route({
     handler: async (request, h) => {
       const { MangaNews } = request.server.plugins['hapi-axios']; // adding a axios plugin to make get request
-      const { data } = await MangaNews.get('comics/manga/');
+      const { data } = await MangaNews.get('comics/manga/');  //there
 
       const $ = cheerio.load(data);
       const titles = $('#primary');
@@ -274,6 +285,9 @@ const init = async () => {
     path: '/GetTrendingAnime',
   });
 
+
+
+  
 
 
 
