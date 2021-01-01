@@ -3,9 +3,9 @@
     "short_name": "Anime10",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#fffff",
+    "background_color": "#fff",
     "description": "Get all The Top 10's Of Anime",
-    "theme_color": "#fffff",
+    "theme_color": "#fff",
     "prefer_related_applications": false,
     "icons": [
       {
