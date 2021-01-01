@@ -19,8 +19,7 @@ const HapiAxios = require('hapi-axios');
 const init = async () => {
 
   const server = Hapi.server({
-    port: process.env.PORT,
-    host: 'localhost',
+    port: process.env.PORT || 3000,
     routes: {
       files: {
         relativeTo: Path.join(__dirname, 'public')
