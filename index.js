@@ -208,21 +208,29 @@ const init = async () => {
       const $ = cheerio.load(data);
       const titles = $('#primary');
       const output = titles.find('h2').text();
+      let index = 0;
 
       let headlines = [];
 
       $('tbody .ranking-list').each((i, el) => {
+        index++
         tit = $(el).find('h3').text();
         redirect_link = $(el).find('h3 a').attr('href');
         Description = $(el).find('.information').text().replace(/^\s+|\s+$|\s+(?=\s)/g, "");
         img_path = $(el).find('.word-break img').attr('data-src');
+        BaseUrl = 'https://myanimelist.net';
+        Source = 'www.myanimelist.net';
+        SourceName = 'MyAnimeList';
 
         headlines.push(
           {
-            'title': `slNo ${i}:  ` + tit,
-            'description': Description,
+            'SlNo' : index,
+            'title': tit,
             'redirect_link': redirect_link,
-            'img_path': img_path
+            'Image_Path': img_path,
+            'Time': Description,
+            'Source': Source,
+            'SourceName' : SourceName
           }
 
 
@@ -247,7 +255,7 @@ const init = async () => {
     handler: async (request, h) => {
       const { TrendingAnime } = request.server.plugins['hapi-axios']; // adding a axios plugin to make get request
       const { data } = await TrendingAnime.get('list/most-popular-anime-today/ranker-anime');
-
+      let index = 0 ;
       const $ = cheerio.load(data);
       const titles = $('#primary');
       const output = titles.find('h2').text();
@@ -255,9 +263,14 @@ const init = async () => {
       let headlines = [];
 
       $('.gridItem_main__3gWq0 ').each((i, el) => {
+        index++;
         tit = $(el).find('h2').text();
         redirect_link = $(el).find('.wikiScrape_main__2Ky8I a').attr('href');
         img_path = $(el).find('.Media_main__2rXtI img').attr('src');
+
+        BaseUrl = 'https://www.ranker.com';
+        Source = 'www.ranker.com';
+        SourceName = 'Ranker';
 
         //if Src tag not found , Check for data-src
         if (img_path === undefined) {
@@ -266,10 +279,13 @@ const init = async () => {
 
         headlines.push(
           {
-            'title': `slNo ${i}:  ` + tit,
-            //  'description': Description,
+            'SlNo' : index,
+            'title': tit,
             'redirect_link': redirect_link,
-            'img_path': img_path
+            'Image_Path': img_path,
+            'Time': new Date().getFullYear(),
+            'Source': Source,
+            'SourceName' : SourceName
           }
 
 

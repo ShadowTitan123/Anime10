@@ -22,12 +22,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="css/structure.css" />
     <link rel="stylesheet" href="css/main.css" />
+ 
     <script async src="assets/scripts/pwacompat.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
       integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
       crossorigin="anonymous"
     ></script>
+    
     <script type="text/javascript" src="Api/fetch.js"></script>
     <!-- specify that your website is a app -->
   </head>
@@ -188,8 +190,10 @@
                     <span class="material-icons">wb_sunny</span>
                   </div>
                   <div>
-                    <div class="page-title">22° c</div>
-                    <div class="page-title-subheading">Partly Cloudy in <span>Bangalore</span></div>
+                    <div class="page-title" id="celsius"> </div>
+                    <div class="page-title-subheading" id="WeatherDescription"> 
+                     
+                    </div>
                   </div>
                 </div>
                 <div class="page-title-actions">
@@ -204,13 +208,18 @@
 
             <!-- News Area -->
             <div class="app-page-body">
+
               <div class="row align-items-center" id="NewsAppend">
                 <script>
                   HomepageNews();
                 </script>
                 <!-- API Fetch Top Stories -->
               </div>
+
+
             </div>
+
+
             <!-- News Area End -->
           </div>
         </div>
@@ -219,5 +228,6 @@
     </section>
     <script type="text/javascript" src="register.js"></script>
     <script type="text/javascript" src="assets/scripts/main.js"></script>
+    <script type="text/javascript" src="Api/GetLocation.js"></script>
   </body>
 </html>
