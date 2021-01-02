@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Language" content="en" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="manifest" href="./manifest.json">  
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png" />
     <!-- <link rel="manifest" href="assets/images/favicon/site.webmanifest"> -->
-    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#111111">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#111111" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
     <title>Top Stories</title>
     <meta
       name="viewport"
@@ -23,10 +23,13 @@
     <link rel="stylesheet" href="css/structure.css" />
     <link rel="stylesheet" href="css/main.css" />
     <script async src="assets/scripts/pwacompat.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+    ></script>
     <script type="text/javascript" src="Api/fetch.js"></script>
     <!-- specify that your website is a app -->
-   
   </head>
 
   <body>
@@ -37,7 +40,7 @@
           <div class="logo-src"></div>
           <div class="header__pane ml-auto">
             <div>
-              <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+              <button type="button" class="hamburger close-sidebar-btn" data-class="closed-sidebar">
                 <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
                 </span>
@@ -47,7 +50,7 @@
         </div>
         <div class="app-header__mobile-menu">
           <div>
-            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+            <button type="button" class="hamburger mobile-toggle-nav">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
               </span>
@@ -55,41 +58,25 @@
           </div>
         </div>
         <div class="app-header__menu">
-          <span>
-            <button type="button" class="btn-icon btn-icon-only btn btn-warning btn-sm mobile-toggle-header-nav">
-              <span class="btn-icon-wrapper">
-                <span class="material-icons fa-w-6">search</span>
-              </span>
-            </button>
-          </span>
+          <div class="btn-group">
+            <a href="mailto:blank0render@gmail.com?Subject=We%20Want%20to%20Hear%20From%20You" class="p-0 btn">
+              <span class="material-icons ml-2 opacity-8">feedback</span>
+            </a>
+          </div>
         </div>
         <div class="app-header__content">
-          <div class="app-header-left">
-            <div class="search-wrapper">
-              <div class="input-holder">
-                <input type="text" class="search-input" placeholder="Type to search" />
-                <button class="search-icon"><span></span></button>
-              </div>
-              <button class="close"></button>
-            </div>
-          </div>
           <div class="app-header-right">
             <div class="header-btn-lg pr-0">
               <div class="widget-content p-0">
                 <div class="widget-content-wrapper">
                   <div class="widget-content-left">
                     <div class="btn-group">
-                      <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                      <a
+                        href="mailto:blank0render@gmail.com?Subject=We%20Want%20to%20Hear%20From%20You"
+                        class="p-0 btn"
+                      >
                         <span class="material-icons ml-2 opacity-8">feedback</span>
                       </a>
-                      <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                        <a
-                          tabindex="0"
-                          class="dropdown-item"
-                          href="mailto:blank0render@gmail.com?Subject=We%20Want%20to%20Hear%20From%20You"
-                          >Send Feedback</a
-                        >
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -201,7 +188,7 @@
                     <span class="material-icons">wb_sunny</span>
                   </div>
                   <div>
-                    <div class="page-title">22* c</div>
+                    <div class="page-title">22° c</div>
                     <div class="page-title-subheading">Partly Cloudy in <span>Bangalore</span></div>
                   </div>
                 </div>
@@ -214,41 +201,14 @@
               </div>
             </div>
             <!-- Weather Area End -->
-           
+
             <!-- News Area -->
             <div class="app-page-body">
               <div class="row align-items-center" id="NewsAppend">
-
                 <script>
                   HomepageNews();
-            </script>
-                <!-- <a href="#" >
-                  <div class="col-12 news-card">
-                    <div class="row">
-                      <div class="col-8 col-md-9 col-lg-9 col-sm-9">
-                        <div class="d-flex flex-row justify-content-start news-card-title">
-                          <h5>1.</h5>
-                          <img src="assets/images/10.jpg" alt="" />
-                          <p>Times of India</p>
-                        </div>
-                        <h4 class="mb-4">
-                          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                          live the blind texts.
-                        </h4>
-                        <div class="source-details">
-                          <p class="text-muted">
-                            <span class="media-source">NDTV</span>
-                            <span>7 hours ago</span>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-4 col-lg-3 col-md-3 col-sm-3 m-auto ml-lg-auto mr-lg-0 pt-5 pt-lg-0">
-                        <img alt="image" class="img-fluid" src="assets/images/logo.png" />
-                      </div>
-                    </div>
-                  </div>
-                </a> -->
-              
+                </script>
+                <!-- API Fetch Top Stories -->
               </div>
             </div>
             <!-- News Area End -->

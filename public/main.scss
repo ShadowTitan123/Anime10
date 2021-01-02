@@ -1,84 +1,82 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
+/* Variable Declarations */
 $font-face: Roboto, san-serif;
 $light-color: #fff;
 $primary-color: #343a40;
 $secondary-color: #fdda00;
 $light-primarycolor: #6c757d;
 
+/* Default Styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
 }
-
 body {
   font-family: $font-face;
   color: $primary-color;
   line-height: 1.6;
 }
-
 a {
   text-decoration: none;
   color: $primary-color;
 }
-
-a:hover{
-   text-decoration: none;
-  }
-
+a:hover {
+  text-decoration: none;
+}
 .material-icons {
   vertical-align: middle;
   text-align: center;
   margin: 0 auto;
 }
 
-.news-card{
-  margin: 20px auto; 
+/* News Card Style */
+.news-card {
+  margin: 20px auto;
   border-radius: 10px;
-  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-        6px 6px 10px rgba(0, 0, 0, 0.2);
-  
-  .news-card-title{
-    margin-top:20px;
-    h5{
-      color:$primary-color;
-      font-size:1rem;
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+
+  .news-card-title {
+    margin-top: 20px;
+    h5 {
+      color: $primary-color;
+      font-size: 1rem;
       font-weight: bold;
     }
-    img{
-      width: 20px; 
+    img {
+      width: 20px;
       height: 20px;
       border-radius: 4px;
       margin: 0 8px;
     }
-    p{
+    p {
       font-size: 0.9rem;
       color: $light-primarycolor;
     }
   }
 
-  h4{
-    font-size: 1rem;
-    font-weight: 400;
+  h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
     color: #111;
-    letter-spacing: 0.5rem;
-    line-height: 1.2rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.5rem;
   }
-  h4:hover{
+  h4:hover {
     text-decoration: underline;
   }
 
-  .source-details{
-    p{
+  .source-details {
+    p {
       font-size: 0.8rem;
 
-      strong{
+      strong {
         font-size: 0.9rem;
       }
 
-      .media-source::after{
+      .media-source::after {
         content: "";
         display: inline-block;
         height: 10px;
@@ -89,6 +87,21 @@ a:hover{
         top: 1px;
         margin: 0 6px;
       }
+    }
+  }
+
+  .img-sec img {
+    height: 150px;
+    width: 100%;
+    float: right;
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 568px) {
+  .news-card {
+    .img-sec img {
+      height: 200px;
     }
   }
 }

@@ -8,18 +8,22 @@ HomepageNews =  ()=>{
             const Headlines = res.data;
            
             Headlines.forEach(news => {
-                Appender += ` <a href="${news.redirect_link.trim()}" >
-                <div class="col-12 news-card">
+                Appender += ` <div class="col-12 news-card">
+                <a href="${news.redirect_link.trim()}" >
                   <div class="row">
-                    <div class="col-8 col-md-9 col-lg-9 col-sm-9">
-                      <div class="d-flex flex-row justify-content-start news-card-title">
-                        <h5>${news.SlNo}</h5>
-                        <img src="${news.Image_Path}" alt="" />
-                        <h4> ${news.title}</h4>
+                    <div class="col-12 col-md-9 col-lg-9 col-sm-9">
+                      <div class="news-card-title">
+                        <div class="d-flex flex-row justify-content-start">
+                          <h5>${news.SlNo}.</h5>
+                          <img src="${news.Image_Path}" alt="" />
+                          <h4> ${news.title}</h4>
+                        </div>
+                        <div class="news-desc">
+                          <h6 class="mt-3 mb-4">
+                           ${news.Description}
+                          </h6>
+                        </div>
                       </div>
-                      <h6 class="mb-4">
-                      ${news.Description}
-                      </h6>
                       <div class="source-details">
                         <p class="text-muted">
                           <span class="media-source">${news.Source}</span>
@@ -27,12 +31,12 @@ HomepageNews =  ()=>{
                         </p>
                       </div>
                     </div>
-                    <div class="col-4 col-lg-3 col-md-3 col-sm-3 m-auto ml-lg-auto mr-lg-0 pt-5 pt-lg-0">
+                    <div class="col-12 col-lg-3 col-md-3 col-sm-3 m-auto ml-lg-auto mr-lg-0 pt-lg-0 img-sec">
                       <img alt="image" class="img-fluid" src="${news.Image_Path}" />
                     </div>
                   </div>
                 </div>
-              </a>`
+              </a>`;
                 
             });
             NewsBlock.innerHTML = Appender;
