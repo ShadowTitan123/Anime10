@@ -64,9 +64,9 @@ function getWeatherDetail(city){
        const GetWeatherDescription = document.getElementById('WeatherDescription');
        const GetWeatherCity = document.getElementById('City');
         console.log(GetWeatherCity);    
-         Celsius = response.data.main.feels_like.toString()
+         Celsius = response.data.main.feels_like.toString();
          Description = response.data.weather[0].description;
-         GetWeatherHtml.innerHTML = Celsius.split('.')[0] + '&#8451'
+         GetWeatherHtml.innerHTML = Celsius.split(".")[0] + "&#176;c"
          GetWeatherDescription.innerHTML = Description + `  in ${city}`;
         Executed = true;
         }

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 /* Variable Declarations */
-$font-face: Roboto, san-serif;
+$font-face: Roboto, san-serif !important;
 $light-color: #fff;
 $primary-color: #343a40;
 $secondary-color: #fdda00;
@@ -94,6 +94,14 @@ a:hover {
     height: 150px;
     width: 100%;
     float: right;
+  }
+}
+
+/* About Section */
+.about-main{
+  padding: 100px 0;
+  h1.about-data{
+    line-height:1.7;
   }
 }
 
