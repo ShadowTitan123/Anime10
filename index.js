@@ -168,19 +168,24 @@ const init = async () => {
       const output = titles.find('h2').text();
 
       let headlines = [];
-
+      let index = 0;
       $('#primary article').each((i, el) => {
         tit = $(el).find('h2').text();
         redirect_link = $(el).find('h2 a').attr('href');
         Description = $(el).find('.entry-content').text();
         img_path = $(el).find('.post-thumbnail img').attr('data-opt-src');
-
+        Source = 'www.bleedingcool.com';
+        SourceName = 'Bleeding Cool NEWS';
+        index++;
         headlines.push(
           {
-            'title': `slNo ${i}:  ` + tit,
-            'description': Description,
+            'SlNo' : index,
+            'title': tit,
+            'Description': Description,
             'redirect_link': redirect_link,
-            'img_path': img_path
+            'Image_Path': img_path,
+            'Source': Source,
+            'SourceName' : SourceName
           }
 
 
