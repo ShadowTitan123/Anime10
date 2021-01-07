@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
 /* Variable Declarations */
-$font-face: Roboto, san-serif !important;
+$font-face: 'Roboto', san-serif !important;
 $light-color: #fff;
 $primary-color: #343a40;
 $secondary-color: #fdda00;
 $light-primarycolor: #6c757d;
-
+$background-one: #fffafa;
 /* Default Styles */
 * {
   box-sizing: border-box;
@@ -32,6 +32,18 @@ a:hover {
   margin: 0 auto;
 }
 
+.color-1 {
+  color: $secondary-color;
+}
+
+.color-2 {
+  color: $light-primarycolor;
+}
+
+.height-card {
+  height: 280px;
+}
+
 /* News Card Style */
 .news-card {
   margin: 20px auto;
@@ -43,7 +55,7 @@ a:hover {
     h5 {
       color: $primary-color;
       font-size: 1rem;
-      font-weight: bold;
+      font-weight: 500;
     }
     img {
       width: 20px;
@@ -55,17 +67,31 @@ a:hover {
       font-size: 0.9rem;
       color: $light-primarycolor;
     }
+    h4 {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #111;
+      letter-spacing: 0.05rem;
+      line-height: 1.5rem;
+    }
+    h4:hover {
+      text-decoration: underline;
+    }
   }
 
-  h4 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #111;
-    letter-spacing: 0.05rem;
-    line-height: 1.5rem;
-  }
-  h4:hover {
-    text-decoration: underline;
+  .news-desc {
+    h6 {
+      font-size: 0.95rem;
+
+      a {
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      a.release-link {
+        color: $secondary-color;
+      }
+    }
   }
 
   .source-details {
@@ -98,18 +124,87 @@ a:hover {
 }
 
 /* About Section */
-.about-main{
-  padding: 100px 0;
-  h1.about-data{
-    line-height:1.7;
+.about-section {
+  margin-top: 70px;
+  .about-main {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    padding: 7.5rem 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    h1.about-data {
+      line-height: 1.7;
+    }
+  }
+  .about-body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    padding: 10rem 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-color: $background-one;
+
+    .developers {
+      h5 {
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+      p {
+        font-size: 0.8rem;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.footer-block {
+  p {
+    color: $light-color;
+    font-weight: 500;
+    letter-spacing: 1px;
+    a {
+      color: $light-color;
+    }
+    a:hover {
+      color: $secondary-color;
+    }
   }
 }
 
 /* Media Queries */
+@media only screen and (max-width: 768px) {
+  .height-card {
+    height: 350px;
+  }
+}
 @media only screen and (max-width: 568px) {
   .news-card {
     .img-sec img {
       height: 200px;
     }
+  }
+  .about-section {
+    .about-main {
+      padding: 5rem 0;
+    }
+  }
+  h1.about-data {
+    font-size: 1.5rem;
+  }
+  .developers {
+    img {
+      width: 70px;
+    }
+  }
+  .height-card {
+    height: auto;
   }
 }

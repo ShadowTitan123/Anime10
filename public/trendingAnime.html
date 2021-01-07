@@ -12,7 +12,7 @@
     <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#111111">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
-    <title>Top Stories</title>
+    <title>Trending Anime</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"
@@ -37,7 +37,7 @@
           <div class="logo-src"></div>
           <div class="header__pane ml-auto">
             <div>
-              <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+              <button type="button" class="hamburger close-sidebar-btn" data-class="closed-sidebar">
                 <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
                 </span>
@@ -47,7 +47,7 @@
         </div>
         <div class="app-header__mobile-menu">
           <div>
-            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+            <button type="button" class="hamburger mobile-toggle-nav">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
               </span>
@@ -55,41 +55,25 @@
           </div>
         </div>
         <div class="app-header__menu">
-          <span>
-            <button type="button" class="btn-icon btn-icon-only btn btn-warning btn-sm mobile-toggle-header-nav">
-              <span class="btn-icon-wrapper">
-                <span class="material-icons fa-w-6">search</span>
-              </span>
-            </button>
-          </span>
+          <div class="btn-group">
+            <a href="mailto:blank0render@gmail.com?Subject=We%20Want%20to%20Hear%20From%20You" class="p-0 btn">
+              <span class="material-icons ml-2 opacity-8">feedback</span>
+            </a>
+          </div>
         </div>
         <div class="app-header__content">
-          <div class="app-header-left">
-            <div class="search-wrapper">
-              <div class="input-holder">
-                <input type="text" class="search-input" placeholder="Type to search" />
-                <button class="search-icon"><span></span></button>
-              </div>
-              <button class="close"></button>
-            </div>
-          </div>
           <div class="app-header-right">
             <div class="header-btn-lg pr-0">
               <div class="widget-content p-0">
                 <div class="widget-content-wrapper">
                   <div class="widget-content-left">
                     <div class="btn-group">
-                      <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                      <a
+                        href="mailto:blank0render@gmail.com?Subject=We%20Want%20to%20Hear%20From%20You"
+                        class="p-0 btn"
+                      >
                         <span class="material-icons ml-2 opacity-8">feedback</span>
                       </a>
-                      <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                        <a
-                          tabindex="0"
-                          class="dropdown-item"
-                          href="mailto:blank0render@gmail.com?Subject=We%20Want%20to%20Hear%20From%20You"
-                          >Send Feedback</a
-                        >
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -135,17 +119,11 @@
             <div class="app-sidebar__inner">
               <ul class="vertical-nav-menu">
                 <li>
-                  <a href="index.html" >
+                  <a href="index.html">
                     <span class="material-icons">language</span>
                     Top Stories
                   </a>
                 </li>
-                <!-- <li>
-                  <a href="animeNews.html">
-                    <span class="material-icons">campaign</span>
-                    Anime News
-                  </a>
-                </li> -->
                 <li>
                   <a href="trendingAnime.html" class="mm-active">
                     <span class="material-icons">timeline</span>
@@ -172,10 +150,7 @@
                   </a>
                   <ul>
                     <li>
-                      <a href="">Help</a>
-                    </li>
-                    <li>
-                      <a href="">Contact</a>
+                      <a href="about.html" target="_blank">About Anime10</a>
                     </li>
                     <li>
                       <a href="mailto:blank0render@gmail.com?Subject=We%20Want%20to%20Hear%20From%20You"
@@ -203,6 +178,8 @@
                   <div>
                     <div class="page-title" id="celsius"> </div>
                     <div class="page-title-subheading" id="WeatherDescription"> 
+                     
+                    </div>
                   </div>
                 </div>
                 <!-- <div class="page-title-actions">
@@ -214,23 +191,24 @@
               </div>
             </div>
             <!-- Weather Area End -->
-           
+
             <!-- News Area -->
-            <div class="app-page-body">
+            <div class="app-page-body px-3">
+
               <div class="row align-items-center" id="NewsAppend">
                 <script>
-                   TrendingAnime();
+                  TrendingAnime();
                 </script>
-                <!-- API Fetch Trending Anime Stories -->
+                <!-- API Fetch Trending Anime -->
               </div>
 
 
             </div>
+
+
             <!-- News Area End -->
           </div>
         </div>
-        <!-- Main Content Area End -->
-      </div>
     </section>
     <script type="text/javascript" src="Api/GetLocation.js"></script>
     <script type="text/javascript" src="assets/scripts/main.js"></script>
